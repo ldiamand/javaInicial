@@ -6,5 +6,8 @@ public class SoloDatosTest {
 		sd1.i = 1;
 		System.out.println(sd1.i);
 		
+		SoloDatos sd2 = new SoloDatos();
+		System.out.println(sd2.c);
+		
 	}
 }
