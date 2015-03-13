@@ -8,6 +8,8 @@ public class IngresoPorTeclado {
 		String linea = s.nextLine();
 		System.out.println(linea.equals("luciano"));
 		System.out.println(linea == "luciano");
+		int i = 0;
+		System.out.println("Resultado:" + i);
 	}
 
 }
