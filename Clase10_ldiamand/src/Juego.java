@@ -47,6 +47,8 @@ public class Juego {
 			} else {
 				System.out.println("Empataron");
 			}
+			
+			Carta ancho = new Carta(Palo.BASTO, Numero.UNO);
 				
 		} while (true);
 	}

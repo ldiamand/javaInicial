@@ -3,6 +3,7 @@
 	<name>Clase10_ldiamand</name>
 	<comment></comment>
 	<projects>
+		<project>Clase09_ldiamand</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
