@@ -17,6 +17,6 @@ public class DimmerTest {
 		d3.on();
 		System.out.println(d3.getIntensidad());
 		System.out.println(d3.isPrendida());
-
+		
 	}
 }
