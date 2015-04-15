@@ -3,7 +3,7 @@ package net.polotecnologico.polimorfismo;
 public class PilaTest {
 
 	public static void main(String[] args) {
-		Pila<Object> p1 = new Pila<>();
+		Pila<String> p1 = new Pila<>();
 		p1.poner("Luciano");
 		p1.poner("Hola");
 //		p1.poner(new Integer(1));

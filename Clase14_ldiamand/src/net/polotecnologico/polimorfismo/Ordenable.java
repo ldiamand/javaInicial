@@ -1,7 +1,7 @@
 package net.polotecnologico.polimorfismo;
 
-public interface Ordenable {
+public interface Ordenable <T> {
 
-	int compareTo (Ordenable ord);
+	int compareTo (T ord);
 
 }

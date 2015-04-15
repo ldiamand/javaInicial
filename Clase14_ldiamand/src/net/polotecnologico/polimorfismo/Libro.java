@@ -1,6 +1,6 @@
 package net.polotecnologico.polimorfismo;
 
-public class Libro implements Ordenable {
+public class Libro implements Ordenable <Libro> {
 
 	private String titulo;
 	
@@ -20,13 +20,13 @@ public class Libro implements Ordenable {
 	}
 	
 	@Override
-	public int compareTo(Ordenable ord) {
-		if (ord instanceof Libro) {
-			Libro tmp = (Libro) ord;
-			return this.anioPublicacion - tmp.anioPublicacion;
-		}
+	public int compareTo(Libro ord) {
+//		if (ord instanceof Libro) {
+//			Libro tmp = (Libro) ord;
+			return this.anioPublicacion - ord.anioPublicacion;
+//		}
 		// Todavia no lo vimos
-		throw new IllegalArgumentException("No es un libro");
+//		throw new IllegalArgumentException("No es un libro");
 	}
 	
 	@Override
