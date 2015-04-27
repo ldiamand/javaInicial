@@ -55,7 +55,7 @@ public class FileTest {
 		System.out.println(f3.getParent());
 		System.out.println(f1.getParent());
 		
-		File [] roots = File.listRoots();
+		File [] roots = File.listRoots(); // En Windows devuelve las unidades
 		
 		File [] cont = dirRoot.listFiles();
 		for (File file : cont) {
@@ -76,5 +76,6 @@ public class FileTest {
 		for (File file : cont2) {
 			System.out.println(file.getAbsolutePath());
 		}
+	
 	}
 }
