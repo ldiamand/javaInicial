@@ -1,7 +1,8 @@
+
 public class ProductorConsumidorTest {
 
 	public static void main(String[] args) {
-		Pila pila = new Pila();
+		Pila pila = new Pila(2);
 		Productor p1 = new Productor(pila, "Productor 1");
 		Productor p2 = new Productor(pila, "Productor 2");
 		Consumidor c1 = new Consumidor(pila, "Consumidor 1");
@@ -16,8 +17,7 @@ public class ProductorConsumidorTest {
 			c1.join();
 			c2.join();
 		} catch (InterruptedException e) {
-			
+			e.printStackTrace();
 		}
-		System.out.println(pila.size());
 	}
 }
