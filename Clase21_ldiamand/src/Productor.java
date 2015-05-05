@@ -5,16 +5,28 @@ public class Productor extends Thread {
 
 	private Pila pila;
 
+	private int cant;
+	
 	private static final NumberFormat FORMATTER = new DecimalFormat("000");
 
-	public Productor(Pila pila, String nombre) {
-		super(nombre);
+	public Productor(Pila pila) {
 		this.pila = pila;
+		this.cant = 200;
+	}
+	
+	public Productor(Pila pila, String nombre) {
+		this(pila);
+		setName(nombre);
 	}
 
+	public Productor(Pila pila, String nombre, int cant) {
+		this(pila, nombre);
+		this.cant = cant;
+	}
+	
 	@Override
 	public void run() {
-		for (int i = 0; i < 200; i++) {
+		for (int i = 0; i < cant; i++) {
 			char caracter = (char) ((int) (Math.random() * 26) + 'A');
 			pila.poner(caracter);
 			try {

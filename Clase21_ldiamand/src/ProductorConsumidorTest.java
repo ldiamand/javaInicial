@@ -2,11 +2,15 @@
 public class ProductorConsumidorTest {
 
 	public static void main(String[] args) {
-		Pila pila = new Pila(2);
-		Productor p1 = new Productor(pila, "Productor 1");
-		Productor p2 = new Productor(pila, "Productor 2");
-		Consumidor c1 = new Consumidor(pila, "Consumidor 1");
-		Consumidor c2 = new Consumidor(pila, "Consumidor 2");
+		Pila pila = new Pila(1);
+		Productor p1 = 
+			new Productor(pila, "Productor 1", 200);
+		Productor p2 =
+			new Productor(pila, "Productor 2", 200);
+		Consumidor c1 =
+			new Consumidor(pila, "Consumidor 1", 200);
+		Consumidor c2 =
+			new Consumidor(pila, "Consumidor 2", 200);
 		p1.start();
 		p2.start();
 		c1.start();

@@ -5,16 +5,29 @@ public class Consumidor extends Thread {
 
 	private Pila pila;
 
+	private int cant;
+	
 	private static final NumberFormat FORMATTER = new DecimalFormat("000");
 
-	public Consumidor(Pila pila, String nombre) {
-		super(nombre);
+	public Consumidor (Pila pila) {
 		this.pila = pila;
+		this.cant = 200;
+	}
+	
+	public Consumidor(Pila pila, String nombre) {
+		this(pila);
+		setName(nombre);
 	}
 
+	public Consumidor(Pila pila, String nombre, int cant) {
+		this(pila, nombre);
+		this.cant = cant;
+	}
+
+	
 	@Override
 	public void run() {
-		for (int i = 0; i < 200; i++) {
+		for (int i = 0; i < cant; i++) {
 			char caracter = pila.sacar();
 			try {
 				int ms = (int) (Math.random() * 10);
